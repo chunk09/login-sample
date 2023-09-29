@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login sample</title>
+</head>
+<body>
+<div th:unless="${isLogin}">
+  <a href="/register">register</a>
+  <a href="/login">login</a>
+</div>
+<div th:if="${isLogin}">
+  <a href="/logout">logout</a>
+</div>
+
+<div>
+  <h1 th:text="|key: ${key}|"></h1>
+</div>
+</body>
+</html>

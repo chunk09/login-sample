@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+
+</head>
+<body>
+<div class="container">
+    <h1>Sign up</h1>
+
+    <form method="post" action="/register/create">
+        <input name="id"  placeholder="Please enter your ID" type="text" />
+        <input name="password" placeholder="Please enter your Password" type="password" />
+        <input name="confirm" placeholder="Please confirm your Password" type="password" />
+        <input name="name" placeholder="Please enter your name" type="text" />
+
+        <p class="error" th:text="${errorMsg}"></p>
+        <button type="submit">Sign up</button>
+    </form>
+</div>
+</body>
+
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 60%;
+        height: 60%;
+        border: 1px solid black;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    input {
+        width: 70%;
+        padding: 1%;
+        margin: 1%;
+        border: none;
+        border-bottom: 1px solid black;
+        font-size: 0.8rem;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        width: 50%;
+        padding: 1.5%;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin-top: 1%;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+</html>
